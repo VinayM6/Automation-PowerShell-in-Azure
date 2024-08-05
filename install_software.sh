@@ -17,5 +17,5 @@ sudo apt install -y git
 # e.g., sudo apt install -y <package-name>
 
 # Verify installations
-#nginx -v
-#git --version
+nginx -v
+git --version

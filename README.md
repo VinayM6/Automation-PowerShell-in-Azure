@@ -87,6 +87,24 @@ This script will be executed on the VM using the Azure Custom Script Extension. 
 To use this script with the Azure Custom Script Extension, follow these steps:
 1.	Upload the Script to Azure Storage:
 
+------------------------------------------------------
+**Result of the Project:**
+------------------------------------------------------
+In this project, I created a Linux virtual machine (VM) in my Azure portal and accessed it using SSH in MobaXterm. Once inside the VM, I utilized a PowerShell script (CreateAZVM.ps1) which I have cloned from My GitHub repository to create a Linux-based VM. This script automated the creation of the resource group, virtual network (VNet), subnet, public IP, network interface, and VM configuration.
+
+Subsequently, I executed another PowerShell script (configurevm.ps1) to perform the following automation tasks on newly created VM:
+
+1.	Install necessary software on the newly created VM using install-software.sh, which is stored in my Azure Storage account.
+2.	Enable Azure Monitor for the VM.
+3.	Create an alert rule for CPU usage.
+4.	Automated Network Security Group (NSG) configuration.
+5.	Automated VM start/stop operations.
+6.	Create an Automation Account.
+7.	Create a runbook for start/stop operations.
+8.	Schedule the start/stop runbooks: 
+    a. Start the VM every day at 7 AM. 
+    b. Stop the VM every day at 7 PM.
+9.	Link schedules to runbooks.
 
 
 
